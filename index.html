@@ -391,7 +391,7 @@
 <hr>
 <h2 id="如何指定Activity的启动模式"><a href="#如何指定Activity的启动模式" class="headerlink" title="如何指定Activity的启动模式"></a><strong>如何指定Activity的启动模式</strong></h2><ol>
 <li><p>通过 AndroidMenifest 为 Activity 指定启动模式</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity</span><br><span class="line">            android:name=<span class="string">".ui.activity.MainActivity"</span></span><br><span class="line">            android:screenOrientation=<span class="string">"portrait"</span></span><br><span class="line">            android:launchMode=<span class="string">"singleTask"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity</span><br><span class="line">       android:name=<span class="string">".ui.activity.MainActivity"</span></span><br><span class="line">       android:screenOrientation=<span class="string">"portrait"</span></span><br><span class="line">       android:launchMode=<span class="string">"singleTask"</span>/&gt;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>通过 Intent 中设置标志位来为 Activity 指定启动模式</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">intent.setClass(MainActivity.<span class="keyword">this</span>, LoginActivity.class);       </span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
@@ -401,163 +401,43 @@
 <p>俩者虽都能为 Activity 指定启动模式，当俩种方式同时存在时，但第二种优先级是高于第一种的；其次，上述俩种方式在限定范围上有所不同，比如，第一种方式无法直接为 Activity 设定 FLAG_ACTIVITY_VLEAR_TOP 标识，而第二种无法为 Activity 指定 singInstance 模式。</p>
 <hr>
 <p>资料来源：《Android开发艺术探索》</p>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">        st=>start: 开始
-        op=>operation: 启动Activity
-        oo=>operation: 创建Activity实例
-        e=>end: 结束
-        st->op
-        op->oo
-        oo->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">        st=>start: 任务栈
-        op=>operation: Activity实例
-        as=>operation: 创建新 Activity 实例
-        ad=>operation: 将 Activity 移至栈顶
-        cond=>condition:  是否存在？
-        cond2=>condition: 是否位于栈顶？
-        e=>end: 结束
-        st->op->cond
-        cond(yes)->cond2
-        cond(no)->as
-        cond2(yes)->e
-        cond2(no)->as</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script><textarea id="flowchart-2-code" style="display: none">        st=>start: Activity 
-       op=>operation: A请求启动
-       cond=>condition:  任务栈存在?
-       st->op->cond
-       op2=>operation: 创建新的任务栈
-       op3=>operation: 创建A实例
-       op4=>operation: 将A放入任务栈
-       op2->op3->op4
-       cond2=>condition:  A实例存在?
-       cond(no)->op2
-       cond(yes)->cond2
-       op5=>operation: 将A调至栈顶
-       op6=>operation: 调用A的onNewInter方法
-       op5->op6
-       op7=>operation: 压入栈中
-       cond2(yes)->op5
-       cond2(no)->op3
-        e=>end: 结束
-        op4->e
-        op6->e</textarea><textarea id="flowchart-2-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-2-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-2", options);</script>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://lbavsc.com/2019/09/18/无限期停更/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="lbavsc">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="某不知名的学习记录博客">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/09/18/无限期停更/" itemprop="url">无限期停更</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-18T18:50:00+08:00">
-                2019-09-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>计划因为现实原因，无限期退后，可能明天就有时间写了，也可能明年。</p>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
+op=>operation: 启动Activity
+oo=>operation: 创建Activity实例
+e=>end: 结束
+st->op
+op->oo
+oo->e</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">st=>start: 任务栈
+op=>operation: Activity实例
+as=>operation: 创建新 Activity 实例
+ad=>operation: 将 Activity 移至栈顶
+cond=>condition:  是否存在？
+cond2=>condition: 是否位于栈顶？
+e=>end: 结束
+st->op->cond
+cond(yes)->cond2
+cond(no)->as
+cond2(yes)->e
+cond2(no)->as</textarea><textarea id="flowchart-1-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script><textarea id="flowchart-2-code" style="display: none">st=>start: Activity 
+op=>operation: A请求启动
+cond=>condition:  任务栈存在?
+st->op->cond
+op2=>operation: 创建新的任务栈
+op3=>operation: 创建A实例
+op4=>operation: 将A放入任务栈
+op2->op3->op4
+cond2=>condition:  A实例存在?
+cond(no)->op2
+cond(yes)->cond2
+op5=>operation: 将A调至栈顶
+op6=>operation: 调用A的onNewInter方法
+op5->op6
+op7=>operation: 压入栈中
+cond2(yes)->op5
+cond2(no)->op3
+e=>end: 结束
+op4->e
+op6->e</textarea><textarea id="flowchart-2-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-2-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-2", options);</script>
           
         
       
@@ -638,7 +518,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">1</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -651,7 +531,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
