@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Android, Activity, Android开发艺术探索,">
+  <meta name="keywords" content="Android,Activity,Android开发艺术探索,">
 
 
 
@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="Activity 的启动模式1. Activity为什么需要启动模式？ 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈） 为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。  2. 有哪几种启动模式sta">
-<meta name="keywords" content="Android, Activity, Android开发艺术探索">
+<meta name="description" content="Activity为什么需要启动模式？ 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈） 为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。  有哪几种启动模式standard（标准模式） singleTo">
+<meta name="keywords" content="Android,Activity,Android开发艺术探索">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Activity的启动模式">
 <meta property="og:url" content="http://lbavsc.com/2019/11/11/Activity的启动模式/index.html">
 <meta property="og:site_name" content="某不知名的学习记录博客">
-<meta property="og:description" content="Activity 的启动模式1. Activity为什么需要启动模式？ 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈） 为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。  2. 有哪几种启动模式sta">
+<meta property="og:description" content="Activity为什么需要启动模式？ 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈） 为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。  有哪几种启动模式standard（标准模式） singleTo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-11T11:24:19.308Z">
+<meta property="og:updated_time" content="2019-11-11T11:54:21.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activity的启动模式">
-<meta name="twitter:description" content="Activity 的启动模式1. Activity为什么需要启动模式？ 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈） 为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。  2. 有哪几种启动模式sta">
+<meta name="twitter:description" content="Activity为什么需要启动模式？ 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈） 为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。  有哪几种启动模式standard（标准模式） singleTo">
 
 
 
@@ -364,24 +364,24 @@
       
 
       
-        <h1 id="Activity-的启动模式"><a href="#Activity-的启动模式" class="headerlink" title="Activity 的启动模式"></a><strong>Activity 的启动模式</strong></h1><h2 id="1-Activity为什么需要启动模式？"><a href="#1-Activity为什么需要启动模式？" class="headerlink" title="1. Activity为什么需要启动模式？"></a><strong>1. Activity为什么需要启动模式？</strong></h2><p> 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈）</p>
+        <h2 id="Activity为什么需要启动模式？"><a href="#Activity为什么需要启动模式？" class="headerlink" title="Activity为什么需要启动模式？"></a><strong>Activity为什么需要启动模式？</strong></h2><p> 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈）</p>
 <p>为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。</p>
 <hr>
-<h2 id="2-有哪几种启动模式"><a href="#2-有哪几种启动模式" class="headerlink" title="2. 有哪几种启动模式"></a><strong>2. 有哪几种启动模式</strong></h2><p>standard（标准模式）</p>
+<h2 id="有哪几种启动模式"><a href="#有哪几种启动模式" class="headerlink" title="有哪几种启动模式"></a><strong>有哪几种启动模式</strong></h2><p>standard（标准模式）</p>
 <p>singleTop（栈顶复用模式）</p>
 <p>singleTask（栈内复用模式）</p>
 <p>singleInstance（单实例模式）</p>
 <hr>
-<h2 id="3-standard（标准模式）："><a href="#3-standard（标准模式）：" class="headerlink" title="3. standard（标准模式）："></a><strong>3. standard（标准模式）：</strong></h2><p>系统默认模式，每启动一个 Activity 都会重建一个实例（即使是同一个 Activity ）, 实例符合activity的生命周期，onCreate、onStart、onResume  都会被调用，属于典型的多实例实现。<br>一个任务栈可以存在多个实例，每个实例也可以属于不同的任务栈。</p>
+<h2 id="standard（标准模式）："><a href="#standard（标准模式）：" class="headerlink" title="standard（标准模式）："></a><strong>standard（标准模式）：</strong></h2><p>系统默认模式，每启动一个 Activity 都会重建一个实例（即使是同一个 Activity ）, 实例符合activity的生命周期，onCreate、onStart、onResume  都会被调用，属于典型的多实例实现。<br>一个任务栈可以存在多个实例，每个实例也可以属于不同的任务栈。</p>
 <p>该模式下，谁启动的 Activity ，这个 Activity 就运行在启动它的那个 Activity 的任务栈中。</p>
-<p>但由于非 Activity 类型的 Context （例如 ApplicationContext ）并没有任务栈，所以用 ApplicationContext 去启动该模式的 Activity 时就会出现错误情况。解决方法是为待启动的 Activity 指定 FLAG_ACTIVITY_NEW_TASK 标记位，这样启动时就会为该 Activity 创建一个新的任务栈， 这个时候待启动的 Activity 实际上是以 singTask（栈内复用模式）启动的。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: 启动Activity</span><br><span class="line">oo=&gt;operation: 创建Activity实例</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">st-&gt;op</span><br><span class="line">op-&gt;oo</span><br><span class="line">oo-&gt;e</span><br></pre></td></tr></table></figure></p>
+<p>但由于非 Activity 类型的 Context （例如 ApplicationContext ）并没有任务栈，所以用 ApplicationContext 去启动该模式的 Activity 时就会出现错误情况。解决方法是为待启动的 Activity 指定 FLAG_ACTIVITY_NEW_TASK 标记位，这样启动时就会为该 Activity 创建一个新的任务栈， 这个时候待启动的 Activity 实际上是以 singTask（栈内复用模式）启动的。<br> <div id="flowchart-0" class="flow-chart"></div></p>
 <hr>
-<h2 id="4-singTop（栈顶复用模式）："><a href="#4-singTop（栈顶复用模式）：" class="headerlink" title="4. singTop（栈顶复用模式）："></a><strong>4. singTop（栈顶复用模式）：</strong></h2><p>该模式下，如果新的 Activity 已经位于任务栈的栈顶，那么此 Activity 不会被重新创建，同时它的onNewInter 方法会被回调，通过此方法的参数可以取出当前请求的信息。</p>
+<h2 id="singTop（栈顶复用模式）："><a href="#singTop（栈顶复用模式）：" class="headerlink" title="singTop（栈顶复用模式）："></a><strong>singTop（栈顶复用模式）：</strong></h2><p>该模式下，如果新的 Activity 已经位于任务栈的栈顶，那么此 Activity 不会被重新创建，同时它的onNewInter 方法会被回调，通过此方法的参数可以取出当前请求的信息。</p>
 <p>但在此情况下，该 Activity 的 onCreate、onStart 不会被系统调用，因为它没有发生变化。</p>
-<p>如果新的 Activity 的实例存在但不是位于栈顶，那么仍会创建新的 Activity 实例。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 任务栈</span><br><span class="line">op=&gt;operation: Activity实例</span><br><span class="line">as=&gt;operation: 创建新 Activity 实例</span><br><span class="line">ad=&gt;operation: 将 Activity 移至栈顶</span><br><span class="line">cond=&gt;condition:  是否存在？</span><br><span class="line">cond2=&gt;condition: 是否位于栈顶？</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;cond2</span><br><span class="line">cond(no)-&gt;as</span><br><span class="line">cond2(yes)-&gt;e</span><br><span class="line">cond2(no)-&gt;as</span><br></pre></td></tr></table></figure></p>
+<p>如果新的 Activity 的实例存在但不是位于栈顶，那么仍会创建新的 Activity 实例。<br> <div id="flowchart-1" class="flow-chart"></div></p>
 <hr>
-<h2 id="5-singTask（栈内复用模式）："><a href="#5-singTask（栈内复用模式）：" class="headerlink" title="5. singTask（栈内复用模式）："></a><strong>5. singTask（栈内复用模式）：</strong></h2><p>这是一种单实例模式，即只要 Activity 在栈内存在，那么即使多次启动 Activity 都不会重新创建实例。该模式也会回调其 onNewInter 。</p>
-<p>例如： 当一个具有 singleTask 模式的 Activity请求启动后，系统首先会寻找该 Activity 想要的任务栈，如果任务栈不存在，则创建一个任务栈， 然后创建该 Activity 放入任务栈中。如果任务栈存在，则需要看该Activity的实例是否存在，存在则系统会把该 Activity 调到栈顶并调用它的 onNewInter 方法，如果Activity实例不存在，就创建 Activity 的实例并把 Activity 压入栈中。<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"> st=&gt;start: Activity </span><br><span class="line">op=&gt;operation: A请求启动</span><br><span class="line">cond=&gt;condition:  任务栈存在?</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">op2=&gt;operation: 创建新的任务栈</span><br><span class="line">op3=&gt;operation: 创建A实例</span><br><span class="line">op4=&gt;operation: 将A放入任务栈</span><br><span class="line">op2-&gt;op3-&gt;op4</span><br><span class="line">cond2=&gt;condition:  A实例存在?</span><br><span class="line">cond(no)-&gt;op2</span><br><span class="line">cond(yes)-&gt;cond2</span><br><span class="line">op5=&gt;operation: 将A调至栈顶</span><br><span class="line">op6=&gt;operation: 调用A的onNewInter方法</span><br><span class="line">op5-&gt;op6</span><br><span class="line">op7=&gt;operation: 压入栈中</span><br><span class="line">cond2(yes)-&gt;op5</span><br><span class="line">cond2(no)-&gt;op3</span><br><span class="line"> e=&gt;end: 结束</span><br><span class="line"> op4-&gt;e</span><br><span class="line"> op6-&gt;e</span><br></pre></td></tr></table></figure></p>
+<h2 id="singTask（栈内复用模式）："><a href="#singTask（栈内复用模式）：" class="headerlink" title="singTask（栈内复用模式）："></a><strong>singTask（栈内复用模式）：</strong></h2><p>这是一种单实例模式，即只要 Activity 在栈内存在，那么即使多次启动 Activity 都不会重新创建实例。该模式也会回调其 onNewInter 。</p>
+<p>例如： 当一个具有 singleTask 模式的 Activity请求启动后，系统首先会寻找该 Activity 想要的任务栈，如果任务栈不存在，则创建一个任务栈， 然后创建该 Activity 放入任务栈中。如果任务栈存在，则需要看该Activity的实例是否存在，存在则系统会把该 Activity 调到栈顶并调用它的 onNewInter 方法，如果Activity实例不存在，就创建 Activity 的实例并把 Activity 压入栈中。<br> <div id="flowchart-2" class="flow-chart"></div></p>
 <ul>
 <li>如 S1 任务栈中存在 ABC 实例，这是 Activity    D 以  singleTask 模式请求启动，所需任务栈为 S2，由于 S2 与 D 都不存在，则先创建 S2 ，然后创建 D 的实例并将其入栈到 S2 。<ul>
 <li>如果 D 所需栈为 S1 ，其他如上，则系统会直接创建 D 的实例并将其入栈到 S1 。</li>
@@ -390,24 +390,59 @@
 </li>
 </ul>
 <hr>
-<h2 id="6-singleInstance（单实例模式）："><a href="#6-singleInstance（单实例模式）：" class="headerlink" title="6. singleInstance（单实例模式）："></a><strong>6. singleInstance（单实例模式）：</strong></h2><p>这是一种加强的 singTask 实例，它除了具有 singTask 模式的所有特性之外，还加强了一点，那就是具有此种模式的 Activity 只能单独地位于一个任务栈中，比如 Activity A 是singleInstance模式，当 A 启动后，系统会为它创建一个新的任务栈，然后 A  单独位于这个新的任务栈中，由于栈内复用的特性，后续的请求均不会创建新的  A ，除非 A 已经被销毁了。</p>
+<h2 id="singleInstance（单实例模式）："><a href="#singleInstance（单实例模式）：" class="headerlink" title="singleInstance（单实例模式）："></a><strong>singleInstance（单实例模式）：</strong></h2><p>这是一种加强的 singTask 实例，它除了具有 singTask 模式的所有特性之外，还加强了一点，那就是具有此种模式的 Activity 只能单独地位于一个任务栈中，比如 Activity A 是singleInstance模式，当 A 启动后，系统会为它创建一个新的任务栈，然后 A  单独位于这个新的任务栈中，由于栈内复用的特性，后续的请求均不会创建新的  A ，除非 A 已经被销毁了。</p>
 <hr>
-<h2 id="7-某些应用情况"><a href="#7-某些应用情况" class="headerlink" title="7. 某些应用情况"></a><strong>7. 某些应用情况</strong></h2><p>假设现在有俩个任务栈，前台任务栈的情况为 AB ，后台任务栈的情况为 CD ，假设 CD 的启动模式均为 singTask 。 现在请求启动 D ，那么整个后台任务栈都会被切换到前台，这个时候整个后退列表就变成了 ABCD 。当用户按下 back 键时，列表中的 Activity 会一一出栈；但如果是请求 C 而不是请求 D ，任务栈会变成 ABC ，D 直接被出栈了 </p>
+<h2 id="某些应用情况"><a href="#某些应用情况" class="headerlink" title="某些应用情况"></a><strong>某些应用情况</strong></h2><p>假设现在有俩个任务栈，前台任务栈的情况为 AB ，后台任务栈的情况为 CD ，假设 CD 的启动模式均为 singTask 。 现在请求启动 D ，那么整个后台任务栈都会被切换到前台，这个时候整个后退列表就变成了 ABCD 。当用户按下 back 键时，列表中的 Activity 会一一出栈；但如果是请求 C 而不是请求 D ，任务栈会变成 ABC ，D 直接被出栈了 </p>
 <hr>
-<h2 id="8-如何指定Activity的启动模式"><a href="#8-如何指定Activity的启动模式" class="headerlink" title="8. 如何指定Activity的启动模式"></a><strong>8. 如何指定Activity的启动模式</strong></h2><ol>
-<li>通过 AndroidMenifest 为 Activity 指定启动模式</li>
-</ol>
+<h2 id="如何指定Activity的启动模式"><a href="#如何指定Activity的启动模式" class="headerlink" title="如何指定Activity的启动模式"></a><strong>如何指定Activity的启动模式</strong></h2><ol>
+<li><p>通过 AndroidMenifest 为 Activity 指定启动模式</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;activity</span><br><span class="line">            android:name=<span class="string">".ui.activity.MainActivity"</span></span><br><span class="line">            android:screenOrientation=<span class="string">"portrait"</span></span><br><span class="line">            android:launchMode=<span class="string">"singleTask"</span>/&gt;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>通过 Intent 中设置标志位来为 Activity 指定启动模式<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">intent.setClass(MainActivity.<span class="keyword">this</span>, LoginActivity.class);       </span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过 Intent 中设置标志位来为 Activity 指定启动模式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = <span class="keyword">new</span> Intent();</span><br><span class="line">intent.setClass(MainActivity.<span class="keyword">this</span>, LoginActivity.class);       </span><br><span class="line">intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);</span><br><span class="line">startActivity(intent);</span><br></pre></td></tr></table></figure>
 
 </li>
 </ol>
 <p>俩者虽都能为 Activity 指定启动模式，当俩种方式同时存在时，但第二种优先级是高于第一种的；其次，上述俩种方式在限定范围上有所不同，比如，第一种方式无法直接为 Activity 设定 FLAG_ACTIVITY_VLEAR_TOP 标识，而第二种无法为 Activity 指定 singInstance 模式。</p>
 <hr>
 <p>资料来源：《Android开发艺术探索》</p>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">        st=>start: 开始
+        op=>operation: 启动Activity
+        oo=>operation: 创建Activity实例
+        e=>end: 结束
+        st->op
+        op->oo
+        oo->e</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script><textarea id="flowchart-1-code" style="display: none">        st=>start: 任务栈
+        op=>operation: Activity实例
+        as=>operation: 创建新 Activity 实例
+        ad=>operation: 将 Activity 移至栈顶
+        cond=>condition:  是否存在？
+        cond2=>condition: 是否位于栈顶？
+        e=>end: 结束
+        st->op->cond
+        cond(yes)->cond2
+        cond(no)->as
+        cond2(yes)->e
+        cond2(no)->as</textarea><textarea id="flowchart-1-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-1-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-1-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-1", options);</script><textarea id="flowchart-2-code" style="display: none">        st=>start: Activity 
+       op=>operation: A请求启动
+       cond=>condition:  任务栈存在?
+       st->op->cond
+       op2=>operation: 创建新的任务栈
+       op3=>operation: 创建A实例
+       op4=>operation: 将A放入任务栈
+       op2->op3->op4
+       cond2=>condition:  A实例存在?
+       cond(no)->op2
+       cond(yes)->cond2
+       op5=>operation: 将A调至栈顶
+       op6=>operation: 调用A的onNewInter方法
+       op5->op6
+       op7=>operation: 压入栈中
+       cond2(yes)->op5
+       cond2(no)->op3
+        e=>end: 结束
+        op4->e
+        op6->e</textarea><textarea id="flowchart-2-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12,"theme":"simple"}</textarea><script>  var code = document.getElementById("flowchart-2-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-2-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-2", options);</script>
       
     </div>
     
@@ -424,7 +459,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android-Activity-Android开发艺术探索/" rel="tag"># Android, Activity, Android开发艺术探索</a>
+            <a href="/tags/Android/" rel="tag"># Android</a>
+          
+            <a href="/tags/Activity/" rel="tag"># Activity</a>
+          
+            <a href="/tags/Android开发艺术探索/" rel="tag"># Android开发艺术探索</a>
           
         </div>
       
@@ -540,7 +579,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -589,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Activity-的启动模式"><span class="nav-number">1.</span> <span class="nav-text">Activity 的启动模式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Activity为什么需要启动模式？"><span class="nav-number">1.1.</span> <span class="nav-text">1. Activity为什么需要启动模式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-有哪几种启动模式"><span class="nav-number">1.2.</span> <span class="nav-text">2. 有哪几种启动模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-standard（标准模式）："><span class="nav-number">1.3.</span> <span class="nav-text">3. standard（标准模式）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-singTop（栈顶复用模式）："><span class="nav-number">1.4.</span> <span class="nav-text">4. singTop（栈顶复用模式）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-singTask（栈内复用模式）："><span class="nav-number">1.5.</span> <span class="nav-text">5. singTask（栈内复用模式）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-singleInstance（单实例模式）："><span class="nav-number">1.6.</span> <span class="nav-text">6. singleInstance（单实例模式）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-某些应用情况"><span class="nav-number">1.7.</span> <span class="nav-text">7. 某些应用情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-如何指定Activity的启动模式"><span class="nav-number">1.8.</span> <span class="nav-text">8. 如何指定Activity的启动模式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Activity为什么需要启动模式？"><span class="nav-number">1.</span> <span class="nav-text">Activity为什么需要启动模式？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有哪几种启动模式"><span class="nav-number">2.</span> <span class="nav-text">有哪几种启动模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#standard（标准模式）："><span class="nav-number">3.</span> <span class="nav-text">standard（标准模式）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#singTop（栈顶复用模式）："><span class="nav-number">4.</span> <span class="nav-text">singTop（栈顶复用模式）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#singTask（栈内复用模式）："><span class="nav-number">5.</span> <span class="nav-text">singTask（栈内复用模式）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#singleInstance（单实例模式）："><span class="nav-number">6.</span> <span class="nav-text">singleInstance（单实例模式）：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#某些应用情况"><span class="nav-number">7.</span> <span class="nav-text">某些应用情况</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何指定Activity的启动模式"><span class="nav-number">8.</span> <span class="nav-text">如何指定Activity的启动模式</span></a></li></ol></div>
             
 
           </div>
