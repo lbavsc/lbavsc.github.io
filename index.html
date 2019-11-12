@@ -288,6 +288,171 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lbavsc.com/2019/11/12/Activity的Flags/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lbavsc">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="某不知名的学习记录博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/12/Activity的Flags/" itemprop="url">Activity的Flags</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-12T18:54:03+08:00">
+                2019-11-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <table>
+<thead>
+<tr>
+<th>Flags</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>FLAG_ACTIVITY_NEW_TASK</td>
+<td>为 Activity 指定 “singTask” 启动模式，其效果和在 XML 中指定该启动模式相同。</td>
+</tr>
+<tr>
+<td>FLAG_ACTIVITY_SINGLE_TOP</td>
+<td>为 Activity 指定 “singTop” 启动模式，其效果和在 XML 中指定该启动模式相同</td>
+</tr>
+<tr>
+<td>FLAG_ACTIVITY_CLEAR_TOP</td>
+<td>具有该启动模式的 Activity ,当他启动时，在同一个任务栈中所有位于它上面的 Activity 都要出栈。这个标记位一般会和 singleTask 启动模式一起出现，在这种情况下，被启动 Activity的实例如果已经存在，那么系统就会调用它的 onNewIntent。如果被启动的 Activity采用 standard模式启动，那么它连同它之上的 Activity要出栈，系统会创建新的 Activity实例并放入栈顶。singleTask启动模式默认就具有此标记位的效果</td>
+</tr>
+<tr>
+<td>FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS</td>
+<td>具有这个标记的 Activity不会出现在历史 Activity的列表中，当某些情况下我们不希望用户通过历史列表回到我们的 Activity的时候这个标记比较有用。它等同于在XML中指定 Activity的属性android:excludeFromRecents＝”true”。</td>
+</tr>
+</tbody></table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://lbavsc.com/2019/11/11/Activity的启动模式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -615,7 +780,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
