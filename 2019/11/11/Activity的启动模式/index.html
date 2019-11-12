@@ -94,7 +94,7 @@
 <meta property="og:site_name" content="某不知名的学习记录博客">
 <meta property="og:description" content="Activity为什么需要启动模式？ 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈） 为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-11T12:07:59.025Z">
+<meta property="og:updated_time" content="2019-11-12T10:50:43.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Activity的启动模式">
 <meta name="twitter:description" content="Activity为什么需要启动模式？ 默认情况，多次启动同一个 Activity  时，系统会创建多个实例并一一放入任务栈中，单击 back 键时，会一一回退（每按一次back就会有一个 Activity 出栈，直至栈空，当栈空时，系统回收次任务栈） 为了根据实际需求，例如不需要重复创建 Activity 时，就要使用其他启动模式。">
@@ -332,6 +332,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -407,7 +429,7 @@
 </ol>
 <p>俩者虽都能为 Activity 指定启动模式，当俩种方式同时存在时，但第二种优先级是高于第一种的；其次，上述俩种方式在限定范围上有所不同，比如，第一种方式无法直接为 Activity 设定 FLAG_ACTIVITY_VLEAR_TOP 标识，而第二种无法为 Activity 指定 singInstance 模式。</p>
 <hr>
-<p>下篇：Activity的生命周期<br>资料来源：《Android开发艺术探索》</p>
+<p>资料来源：《Android开发艺术探索》</p>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始
 op=>operation: 启动Activity
 oo=>operation: 创建Activity实例
@@ -474,6 +496,22 @@ op6->e</textarea><textarea id="flowchart-2-options" style="display: none">{"them
       
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/11/10/Activity生命周期/" rel="next" title="Activity生命周期">
+                <i class="fa fa-chevron-left"></i> Activity生命周期
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
@@ -552,12 +590,21 @@ op6->e</textarea><textarea id="flowchart-2-options" style="display: none">{"them
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
             
 
             
@@ -565,7 +612,7 @@ op6->e</textarea><textarea id="flowchart-2-options" style="display: none">{"them
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
